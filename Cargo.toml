@@ -1,0 +1,18 @@
+[package]
+name = "test-tui"
+version = "0.1.0"
+authors = ["Justin R. Evans <jurevans@gmail.com>"]
+edition = "2021"
+license = "MIT"
+
+[dependencies]
+crossterm = "0.25.0"
+# See color-eyre as well for other handlers
+eyre = "0.6.8"
+log = "0.4.17"
+tokio = { version = "1.21.0", features = ["full"] }
+# TODO: Upgrade tui to 0.19.0 when tui-logger supports it.
+# Alternatively, find a better solution here
+tui = { version = "0.18.0", default-features = true, features = ["termion"]}
+tui-logger = "0.8.0"
+# tui-logger = { file = "../tui-logger" }
